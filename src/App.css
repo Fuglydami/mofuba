@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap');
+
+* {
+  /* color:  #0077ae; */
+}
+body {
+  font-family: 'Mulish', sans-serif;
+
+  /* color: #ac4500; */
+}
+.PhoneInputInput:focus-visible {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+}
+.PhoneInputInput {
+  background-color: white;
+  font-size: 16px;
+}
+
+.modalBackdrop {
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+@media (max-width: 600px) {
+  .ReactOtpInput {
+    max-width: 300px;
+  }
+  .ReactOtpInput input {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .ReactOtpInput {
+    max-width: 400px;
+  }
+  .ReactOtpInput input {
+    width: 45px;
+    height: 45px;
+    margin: 0 8px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  .App {
+    font-size: 18px;
+  }
+  .ReactOtpInput {
+    max-width: 500px;
+  }
+  .ReactOtpInput input {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    font-size: 24px;
+  }
+}
