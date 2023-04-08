@@ -37,11 +37,7 @@ const LandingPage = () => {
 
   return (
     <main className='max-w-screen-xl  min-h-screen   mx-auto'>
-      <Navbar
-        openModal={openModal}
-        isOpen={isOpen}
-        openModalLogin={openModalLogin}
-      />
+      <Navbar openModal={openModal} openModalLogin={openModalLogin} />
       <Hero />
 
       <ModalWrapper isOpen={isOpen} closeModal={closeModal}>

@@ -4,8 +4,9 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import CompanyLogo from '../assets/images/company-logo.png';
 import { CustomButton } from '../shared-lib/custom-button';
 
-const Navbar = ({ openModal, openModalLogin, isOpen }) => {
-  const [show, setShow] = useState(true);
+const Navbar = ({ openModal, openModalLogin }) => {
+  const [show, setShow] = useState(false);
+
   return (
     <div className='w-full text-gray-700  lg:py-12 md:py-8 py-6 '>
       <div className='flex flex-col   mx-auto md:items-center md:justify-between md:flex-row '>
@@ -15,7 +16,7 @@ const Navbar = ({ openModal, openModalLogin, isOpen }) => {
           </div>
 
           <RxHamburgerMenu
-            onClick={() => setShow(!show)}
+            onClick={() => setShow(true)}
             className='md:hidden flex  text-[24px] text-[#000] m-4'
           />
         </div>
