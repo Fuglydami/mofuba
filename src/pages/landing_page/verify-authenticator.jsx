@@ -11,6 +11,7 @@ const VerifyAuthenticator = () => {
 
     console.log(value, 'value');
   };
+
   return (
     <>
       {' '}

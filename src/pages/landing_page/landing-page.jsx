@@ -4,13 +4,13 @@ import Hero from '../../components/hero';
 import Navbar from '../../components/navbar';
 
 import { ModalWrapper } from '../../shared-lib/modal-wrapper';
+import SmsLogin from './SmsLogin';
 import Accounts from './account';
 import AuthenticateLogin from './authenticateLogin';
 import CreatePassword from './create-password';
 import SecureAccount from './secure-account';
 import SignIn from './sign-in';
 import SignUp from './sign-up';
-import SmsLogin from './SmsLogin';
 import VerifyAuthenticator from './verify-authenticator';
 import VerifyPhone from './verify-phone';
 
