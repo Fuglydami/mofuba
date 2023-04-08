@@ -14,7 +14,7 @@ const Accounts = ({ setToggleModal }) => {
       <div className='flex items-center  md:gap-6 gap-2 md:px-4 px-0'>
         <div
           onClick={() => setToggleModal('sign-up')}
-          className='p-4 w-[48.3%] border rounded-[12px] cursor-pointer border-[#E2E8F0]'
+          className='md:px-4 px-2 py-4 w-[48.3%] border rounded-[12px] cursor-pointer border-[#E2E8F0]'
         >
           <div className='flex justify-center mb-1'>
             <img src={Icon1} className='' alt='account icon' />
@@ -26,7 +26,7 @@ const Accounts = ({ setToggleModal }) => {
         </div>
         <div
           onClick={() => setToggleModal('sign-up')}
-          className='p-4 w-[48.3%] border cursor-pointer rounded-[12px] bg-primaryColor border-[#E2E8F0]'
+          className='md:px-4 px-2 py-4  w-[48.3%] border cursor-pointer rounded-[12px] bg-primaryColor border-[#E2E8F0]'
         >
           <div className='flex justify-center mb-1'>
             <img src={Icon2} alt='account icon' />

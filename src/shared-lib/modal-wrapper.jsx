@@ -38,7 +38,7 @@ export const ModalWrapper = ({ isOpen, closeModal, children }) => {
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'
             >
-              <Dialog.Panel className=' bg-[#fff] w-full max-w-[560px] transform overflow-hidden rounded-md bg-white md:px-12 md:py-12 px-6 py-6  text-left align-middle shadow-xl transition-all'>
+              <Dialog.Panel className=' bg-[#fff] w-full max-w-[560px] transform overflow-hidden rounded-md bg-white md:px-12 md:py-12 px-4 py-6  text-left align-middle shadow-xl transition-all'>
                 <Dialog.Title
                   as='h3'
                   className='text-lg flex flex-col font-medium leading-6 text-center text-gray-900'
