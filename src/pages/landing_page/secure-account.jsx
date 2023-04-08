@@ -37,7 +37,7 @@ const SecureAccount = ({ setToggleModal }) => {
       <div className=' mb-10     flex items-center  md:gap-6 gap-2 md:px-4 px-0'>
         <div
           onClick={() => handleCardClick('Authenticator App')}
-          className={`p-4 border w-[48.3%] border-[#E2E8F0] cursor-pointer rounded-[12px]  ${
+          className={`md:px-4 px-2 py-4  border w-[48.3%] border-[#E2E8F0] cursor-pointer rounded-[12px]  ${
             selected === 'Authenticator App'
               ? 'bg-primaryColor text-[#fff]'
               : 'bg-[#fff] text-[#000]'
@@ -66,7 +66,7 @@ const SecureAccount = ({ setToggleModal }) => {
         </div>
         <div
           onClick={() => handleCardClick('SMS')}
-          className={`p-4 border w-[48.3%] border-[#E2E8F0] cursor-pointer rounded-[12px]  ${
+          className={`md:px-4 px-2 py-4  border w-[48.3%] border-[#E2E8F0] cursor-pointer rounded-[12px]  ${
             selected === 'SMS'
               ? 'bg-primaryColor text-[#fff]'
               : 'bg-[#fff] text-[#000]'
