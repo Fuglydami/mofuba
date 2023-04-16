@@ -10,10 +10,12 @@ const Hero = () => {
             Save 50% on <span className='text-primaryColor'>Cross-Border</span>{' '}
             Transfer Fees
           </div>
+
           <p className='relative xl:left-[600px] xl:mt-0 mt-24 text-[#000000] bottom-20 md:text-[1.345rem] text-[1.1rem] font-mulish md:w-[25.75rem] w-full'>
             Join thousands of customers who trust our fast, secure, and
             affordable platform
           </p>
+
           <button className='btn btn-active px-8 gap-4 h-[83px] justify-center border-1 border-[#000000] bg-[#fff] hover:bg-[#fff]  text-[#000] text-[20px] font-[700] rounded-full'>
             <span>GET STARTED</span>
             <BsArrowRight />

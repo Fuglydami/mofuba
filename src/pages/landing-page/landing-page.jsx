@@ -4,15 +4,15 @@ import Hero from '../../components/hero';
 import Navbar from '../../components/navbar';
 
 import { ModalWrapper } from '../../shared-lib/modal-wrapper';
-import SmsLogin from './SmsLogin';
-import Accounts from './account';
-import AuthenticateLogin from './authenticateLogin';
-import CreatePassword from './create-password';
-import SecureAccount from './secure-account';
-import SignIn from './sign-in';
-import SignUp from './sign-up';
-import VerifyAuthenticator from './verify-authenticator';
-import VerifyPhone from './verify-phone';
+import SmsLogin from '../onboarding/SmsLogin';
+import Accounts from '../onboarding/account';
+import AuthenticateLogin from '../onboarding/authenticateLogin';
+import CreatePassword from '../onboarding/create-password';
+import SecureAccount from '../onboarding/secure-account';
+import SignUp from '../onboarding/sign-up';
+import VerifyAuthenticator from '../onboarding/verify-authenticator';
+import VerifyPhone from '../onboarding/verify-phone';
+import SignIn from '../signIn/sign-in';
 
 const LandingPage = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -8,7 +8,7 @@ const Navbar = ({ openModal, openModalLogin }) => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className='w-full text-gray-700  lg:py-12 md:py-8 py-6 '>
+    <div className='w-full text-gray-700  lg:py-12 md:py-8 py-3 '>
       <div className='flex flex-col   mx-auto md:items-center md:justify-between md:flex-row '>
         <div className='flex justify-between'>
           <div className='flex flex-row items-center justify-between p-4'>

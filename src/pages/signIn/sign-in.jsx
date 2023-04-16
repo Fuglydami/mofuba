@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BsApple } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
+import { useNavigate } from 'react-router-dom';
 import { CustomButton } from '../../shared-lib/custom-button';
 import { CustomInput, CustomPasswordInput } from '../../shared-lib/input';
 
@@ -9,6 +10,7 @@ const initState = {
   password: '',
 };
 const SignIn = ({ setToggleModal }) => {
+  let navigate = useNavigate();
   const [data, setData] = useState(initState);
   const handleFields = (key, value) => {
     setData({ ...data, [key]: value });
@@ -69,7 +71,7 @@ const SignIn = ({ setToggleModal }) => {
             </div>
             <CustomButton
               title='Sign In'
-              // onClick={submitForm}
+              onClick={() => navigate('/dashboard')}
               containerStyle=''
               buttonStyle='w-full  mb-5 '
             />

@@ -11,7 +11,7 @@ export const CustomInput = ({
   width = 'w-full',
   textColor = 'text-black',
 }) => {
-  const inputStyle = `font-mulish appearance-none border ${textColor} border-[#E2E8F0] rounded-xl px-4 py-3 md:py-3 placeholder-gray-300 focus:outline-none focus:ring-1 focus:ring-primaryColor focus:invalid:ring-pink-500 focus:shadow-md bg-transparent focus:bg-transparent `;
+  const inputStyle = `font-mulish appearance-none border ${textColor} border-[#E2E8F0] rounded-xl px-4 py-3 md:py-3 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primaryColor focus:invalid:ring-pink-500 focus:shadow-md bg-transparent focus:bg-transparent `;
   return (
     <div id='input' className={`flex flex-col  ${width} `}>
       <label
@@ -52,7 +52,7 @@ export const CustomPasswordInput = ({
     right: '20px',
     fontSize: '25px',
   };
-  const inputStyle = `font-mulish appearance-none border ${textColor} border-[#E2E8F0] rounded-xl px-4 py-3 md:py-3 placeholder-gray-300 focus:outline-none focus:ring-1 focus:ring-primaryColor focus:invalid:ring-pink-500 focus:shadow-md bg-transparent focus:bg-transparent `;
+  const inputStyle = `font-mulish appearance-none border ${textColor} border-[#E2E8F0] rounded-xl px-4 py-3 md:py-3 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primaryColor focus:invalid:ring-pink-500 focus:shadow-md bg-transparent focus:bg-transparent `;
   return (
     <div id='input' className={`flex flex-col ${width}  relative`}>
       {label && (
@@ -80,17 +80,6 @@ export const CustomPasswordInput = ({
   );
 };
 
-const arrayOfCountries = [
-  'Nigeria',
-  'Ghana',
-  'South Africa',
-  'Kenya',
-  'Tanzania',
-  'Uganda',
-  'Rwanda',
-  'Burundi',
-];
-
 export const CustomSelect = ({
   label,
   value,
@@ -98,8 +87,11 @@ export const CustomSelect = ({
   placeholder,
   hidden = '*',
   width = 'w-full',
+  text = 'text-[#000]',
   options,
+  arrayOfCurrency,
 }) => {
+  console.log(arrayOfCurrency, 'currencies');
   return (
     <div id='input' className={`flex flex-col ${width} lg:my-5 my-0 `}>
       <label
@@ -113,17 +105,17 @@ export const CustomSelect = ({
       </label>
 
       <select
-        id='countries'
+        id='currency'
         onChange={onChange}
         value={value}
-        className='font-Inter text-gray-800 border border-gray-300 rounded-md px-4 py-3 md:py-2.5 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-main focus:invalid:ring-pink-500 focus:shadow-lg bg-transparent focus:bg-transparent   '
+        className={`font-Inter ${text}  border border-[#E2E8F0] rounded-md px-4 py-3 md:py-2.5 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primaryColor focus:invalid:ring-pink-500 focus:shadow-lg bg-transparent focus:bg-transparent   `}
       >
-        <option value={''} className='text-gray-300' selected>
+        {/* <option value={''} className='text-gray-300' selected>
           {placeholder}
-        </option>
-        {(options ?? arrayOfCountries).map((option, i) => (
-          <option key={i}>{option}</option>
-        ))}
+        </option> */}
+
+        {arrayOfCurrency &&
+          arrayOfCurrency.map((option, i) => <option key={i}>{option}</option>)}
       </select>
     </div>
   );
