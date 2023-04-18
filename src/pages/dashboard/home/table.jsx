@@ -5,7 +5,7 @@ import Frame3 from '../../../assets/images/frame 3.png';
 import Frame1 from '../../../assets/images/frame1.png';
 import Frame2 from '../../../assets/images/frame2.png';
 import { CustomButton } from '../../../shared-lib/custom-button';
-const Table = () => {
+const Table = ({ title }) => {
   const data = [
     {
       id: 1,
@@ -34,12 +34,13 @@ const Table = () => {
   ];
   return (
     <section className='border border-[#EDF2F7] p-8'>
-      <div className='flex justify-between mb-6'>
-        <h1 className='font-[800] text-[18px]'>Recent Transactions</h1>
+      <div className='flex justify-between items-center mb-6'>
+        <h1 className='font-[800] text-[18px]'>{title}</h1>
         <div>
           <CustomButton
             backgroundColor='bg-[#FAFAFA] hover:bg-[#CDCDCD]'
             text='text-[#000]'
+            height={'34px'}
             rounded='rounded-[8px]'
             // buttonStyle={'w-[228px] '}
             title={

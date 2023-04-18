@@ -21,7 +21,7 @@ const DashboardNav = () => {
       case 'invoices':
         return 'Invoices';
       case 'my-account':
-        return 'My account';
+        return 'Account details';
       default:
         return null;
     }

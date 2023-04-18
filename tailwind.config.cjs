@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       anybody: ['Anybody', 'cursive'],
       mulish: ['Mulish', 'sans-serif'],
+      Manrope: ['Manrope', 'sans-serif'],
     },
 
     colors: {

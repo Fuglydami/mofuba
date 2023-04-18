@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish&family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anybody&family=Manrope:wght@400;500&display=swap');
 * {
   /* color:  #0077ae; */
 }
@@ -19,6 +19,7 @@ body {
 .PhoneInputInput {
   background-color: white;
   font-size: 16px;
+  /* color: #dedede; */
 }
 
 .modalBackdrop {

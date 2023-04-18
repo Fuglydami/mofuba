@@ -15,7 +15,7 @@ const Sidebar = () => {
     <>
       <aside
         className='sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-300
-  px-4 py-2 w-[250px] overflow-y-auto text-center bg-[#FAFAFA] shadow h-screen'
+  px-4 py-7 w-[250px] overflow-y-auto text-center bg-[#FAFAFA] shadow h-screen'
       >
         <div className='text-gray-100 text-xl'>
           <div className='flex justify-between'>

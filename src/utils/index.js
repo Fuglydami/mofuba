@@ -13,6 +13,29 @@ export const inputStyle = {
 
   // background: value ? "#FFF1E7" : "transparent",
 };
+export const tableStyles = {
+  rows: {
+    style: {
+      minHeight: '60px', // override the row height
+      fontWeight: '600',
+      fontSize: '16px',
+    },
+  },
+  title: {
+    style: {
+      fontWeight: '700',
+      fontSize: '16px',
+    },
+  },
+  headCells: {
+    style: {
+      minHeight: '51px', // override the row height
+      color: '#718096',
+      fontWeight: '800',
+      fontSize: '16px',
+    },
+  },
+};
 
 export const containerStyle = {
   backgroundColor: 'white',

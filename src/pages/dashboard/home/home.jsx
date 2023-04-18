@@ -14,8 +14,8 @@ import Table from './table';
 import Wallet from './wallet';
 const Home = () => {
   return (
-    <main className='p-8 flex gap-8'>
-      <section className='w-[55vw]'>
+    <main className='px-8 py-4 flex  gap-8'>
+      <section className='w-[70%]'>
         <div className='relative rounded-[16px] px-6 py-10 mb-10 bg-[#E1F6FD] flex justify-between items-center'>
           <div>
             <h1 className='font-[800] text-[#000] text-[24px] mb-3'>
@@ -59,9 +59,9 @@ const Home = () => {
           />
         </div>
         <Chart />
-        <Table />
+        <Table title={'Recent Transactions'} />
       </section>
-      <section className='w-[27vw]'>
+      <section className='w-[30%]'>
         <div className='border border-[#EDF2F7] p-8 mb-10'>
           <div className='mb-8 flex justify-between items-center '>
             <h1 className='font-[800] text-[18px]'>Wallet</h1>

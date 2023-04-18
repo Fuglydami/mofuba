@@ -8,6 +8,7 @@ export const CustomInput = ({
   onChange,
   placeholder,
   type,
+  labelText = 'text-sm',
   width = 'w-full',
   textColor = 'text-black',
 }) => {
@@ -16,7 +17,7 @@ export const CustomInput = ({
     <div id='input' className={`flex flex-col  ${width} `}>
       <label
         htmlFor={label}
-        className={`black text-sm mb-1   ${
+        className={` mb-2 ${labelText}   ${
           label &&
           `after:content-[${hidden}] after:text-red-500 after:pl-1 after:font-bold`
         }`}

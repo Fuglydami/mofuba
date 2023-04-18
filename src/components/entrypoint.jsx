@@ -15,7 +15,7 @@ const Entrypoint = () => {
             <div className=' text-[24] bg-[#fff] font-bold'>Loading...</div>
           }
         >
-          <div className='mt-6 text-[#000]'>
+          <div className='mt-8 text-[#000]'>
             <Outlet />
           </div>
         </Suspense>
