@@ -6,8 +6,10 @@ import { MdSecurity } from 'react-icons/md';
 import { useRef } from 'react';
 import { useState } from 'react';
 import PersonalInformation from './personalInformation';
+import useScrollToTop from '../../../hooks/useScrollToTop';
 
 const MyAccount = () => {
+  useScrollToTop();
   const [selectedItem, setSelectedItem] = useState(0);
 
   const handleClick = (index) => {
@@ -93,7 +95,7 @@ const MyAccount = () => {
             })}
           </div>
         </section>
-        <div className='bg-[#E2E8F0] h-[100vh] w-[1px] ' />
+        <div className='bg-[#E2E8F0] h-auto w-[1px] ' />
         <section className='w-[70%] mt-10'>
           <PersonalInformation />
         </section>

@@ -8,12 +8,12 @@ export const CustomButton = ({
   rounded = 'rounded-full',
   text = 'text-[#fff]',
   fontSize = 'text-sm',
-  border = 'hover:border-none',
+  border = 'border border-transparent hover:border-none',
   width,
   backgroundColor = 'bg-primaryColor hover:bg-primaryDeep ',
 }) => {
   const container = ` ${containerStyle}`;
-  const buttonClassName = `btn capitalize btn-active ${width} ${border} ${fontSize}  ${height} inline-flex  ${backgroundColor} justify-center ${rounded} border border-transparent  font-[800] px-4  ${text}   focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2  ${buttonStyle}`;
+  const buttonClassName = `btn capitalize btn-active ${width} ${border} ${fontSize}  ${height} inline-flex  ${backgroundColor} justify-center ${rounded}   font-[800] px-4  ${text}   focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2  ${buttonStyle}`;
   return (
     <div className={container}>
       <button type='button' className={buttonClassName} onClick={onClick}>

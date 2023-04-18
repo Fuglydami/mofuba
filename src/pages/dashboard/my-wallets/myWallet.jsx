@@ -8,8 +8,10 @@ import Table from '../home/table';
 import Cards from './cards';
 import Chart from './chart';
 import TransactionBreakdown from './transactionBreakdown';
+import useScrollToTop from '../../../hooks/useScrollToTop';
 
 const MyWallet = () => {
+  useScrollToTop();
   const data = [
     {
       icon: <BiPlus style={{ color: '#008DD0', fontSize: '20px' }} />,

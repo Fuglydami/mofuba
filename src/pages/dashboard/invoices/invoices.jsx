@@ -6,8 +6,10 @@ import { BsThreeDots } from 'react-icons/bs';
 import { CustomInput } from '../../../shared-lib/input';
 import { useState } from 'react';
 import { MdOutlineSwapHoriz } from 'react-icons/md';
+import useScrollToTop from '../../../hooks/useScrollToTop';
 
 const Invoices = () => {
+  useScrollToTop();
   const [search, setSearch] = useState('');
   const setStatusColor = (status) => {
     if (status === 'Paid') return 'bg-[#F6FDF9] text-[#22C55E]';
@@ -79,6 +81,24 @@ const Invoices = () => {
       amount: '$5,789.00',
 
       status: 'Failed',
+    },
+    {
+      name: 'Barone Website',
+      desc: 'INV106XXX',
+      date: 'December 29, 2023',
+      receipient: 'Barone LLC.',
+      amount: '$3,567.00',
+
+      status: 'Paid',
+    },
+    {
+      name: 'Biffco Mobile App',
+      desc: 'INV105XXX',
+      date: 'December 25, 2023',
+      receipient: 'Biffco Enterprises',
+      amount: '$6,345.23',
+
+      status: 'Paid',
     },
   ];
 

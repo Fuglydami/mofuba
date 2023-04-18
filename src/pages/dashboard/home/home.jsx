@@ -12,7 +12,9 @@ import Chart from './chart';
 import QuickExchange from './quickExchange';
 import Table from './table';
 import Wallet from './wallet';
+import useScrollToTop from '../../../hooks/useScrollToTop';
 const Home = () => {
+  useScrollToTop();
   return (
     <main className='px-8 py-4 flex  gap-8'>
       <section className='w-[70%]'>
@@ -92,22 +94,22 @@ const Home = () => {
               className='bg-[#E2E8F0] rounded-[50px] w-[10px] h-[4px]'
             ></a>
           </div>
-          <div className='flex justify-between items-center mt-2'>
-            <div className='flex flex-col items-center'>
-              <div className='border border-[#EDF2F7] cursor-pointer rounded-full h-[60px] w-[60px] flex justify-center items-center my-4 mx-8'>
+          <div className='flex  items-center mt-2 '>
+            <div className='flex flex-col items-center '>
+              <div className='border border-[#EDF2F7]  cursor-pointer rounded-full h-[6vh] w-[3vw] flex justify-center items-center my-4 mx-8'>
                 <BiPlus style={{ color: '#008DD0', fontSize: '25px' }} />
               </div>
               <p className='font-[600] text-[14px] text-[#718096] '>Top-Up</p>
             </div>
             <div className='flex flex-col items-center'>
-              <div className='border border-[#EDF2F7] cursor-pointer rounded-full h-[60px] w-[60px] flex justify-center items-center my-4 mx-8'>
+              <div className='border border-[#EDF2F7] cursor-pointer rounded-full h-[6vh] w-[3vw] flex justify-center items-center my-4 mx-8'>
                 <BsSend style={{ color: '#FACC15', fontSize: '25px' }} />
               </div>
               <p className='font-[600]  text-[14px] text-[#718096] '>Send</p>
             </div>
 
             <div className='flex flex-col items-center'>
-              <div className='border border-[#EDF2F7] cursor-pointer rounded-full h-[60px] w-[60px] flex justify-center items-center my-4 mx-8'>
+              <div className='border border-[#EDF2F7] cursor-pointer rounded-full h-[6vh] w-[3vw] flex justify-center items-center my-4 mx-8'>
                 <MdOutlineInstallDesktop
                   style={{ color: '#22C55E', fontSize: '25px' }}
                 />

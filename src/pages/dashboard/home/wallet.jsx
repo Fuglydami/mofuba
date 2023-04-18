@@ -11,7 +11,7 @@ const Wallet = () => {
   const [type, setType] = useState(false);
   return (
     <>
-      <div className='w-[90%] mx-auto rounded-[16px] bg-[#000] p-8'>
+      <div className='w-full mx-auto rounded-[16px] bg-[#000] p-8'>
         <div className=' flex items-center gap-4 justify-end mb-14'>
           <img src={Frame3} alt='USD' className='w-[30] h-[30px]' />
           <h1 className='font-[800] text-[18px] text-[#fff]'>USD</h1>
