@@ -12,7 +12,9 @@ const Entrypoint = () => {
 
         <Suspense
           fallback={
-            <div className=' text-[24] bg-[#fff] font-bold'>Loading...</div>
+            <div className=' text-[24] bg-[#fff] grid place-content-center font-bold'>
+              Loading...
+            </div>
           }
         >
           <div className='mt-8 text-[#000]'>
