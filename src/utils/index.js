@@ -13,6 +13,16 @@ export const inputStyle = {
 
   // background: value ? "#FFF1E7" : "transparent",
 };
+export const toastData = {
+  position: 'top-right',
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: 'light',
+};
 export const tableStyles = {
   rows: {
     style: {

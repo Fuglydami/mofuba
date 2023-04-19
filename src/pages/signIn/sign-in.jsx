@@ -4,6 +4,9 @@ import { FcGoogle } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
 import { CustomButton } from '../../shared-lib/custom-button';
 import { CustomInput, CustomPasswordInput } from '../../shared-lib/input';
+import { posthttp } from '../../services/actions';
+import { AUTH } from '../../services/api-url';
+import { toast } from 'react-toastify';
 
 const initState = {
   username: '',
@@ -12,8 +15,30 @@ const initState = {
 const SignIn = ({ setToggleModal }) => {
   let navigate = useNavigate();
   const [data, setData] = useState(initState);
+  const [loading, setLoading] = useState(false);
   const handleFields = (key, value) => {
     setData({ ...data, [key]: value });
+  };
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const payload = {
+      username: data.username,
+      password: data.password,
+    };
+    if (data.username && data.password) {
+      setLoading(true);
+      const data = await posthttp(AUTH, payload);
+      if (data && data.status === 200) {
+        // saveJsonItemToLocalStorage('token-details', data.data.token);
+        // saveJsonItemToLocalStorage('user-details', data.data.data);
+        setLoading(false);
+        navigate('/dashboard');
+      } else {
+        setLoading(false);
+      }
+    } else {
+      toast.warning('Enter Username and Password', toastData);
+    }
   };
   return (
     <div className='w-full '>
@@ -45,8 +70,8 @@ const SignIn = ({ setToggleModal }) => {
             <div className='space-y-4'>
               <CustomInput
                 value={data.username}
-                placeholder='Enter your email'
-                type='email'
+                placeholder='Enter your username'
+                type='text'
                 width='w-full'
                 textColor='black'
                 onChange={(e) => handleFields('username', e.target.value)}
@@ -71,7 +96,9 @@ const SignIn = ({ setToggleModal }) => {
             </div>
             <CustomButton
               title='Sign In'
-              onClick={() => navigate('/dashboard')}
+              loading={loading}
+              // onClick={() => navigate('/dashboard')}
+              onClick={(e) => handleLogin(e)}
               containerStyle=''
               buttonStyle='w-full  mb-5 '
             />

@@ -18,14 +18,7 @@ export const CustomButton = ({
     <div className={container}>
       <button type='button' className={buttonClassName} onClick={onClick}>
         {!loading && title}
-        {loading && (
-          <div className='flex justify-center w-full'>
-            Processing...
-            <div className='ml-8'>
-              <Spinner />
-            </div>
-          </div>
-        )}
+        {loading && <div>Processing...</div>}
       </button>
     </div>
   );

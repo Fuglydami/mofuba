@@ -4,7 +4,8 @@ import './App.css';
 import { lazy } from 'react';
 import Entrypoint from './components/entrypoint';
 import Home from './pages/dashboard/home/home';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Invoices = lazy(() => import('./pages/dashboard/invoices/invoices'));
 const MyAccount = lazy(() => import('./pages/dashboard/my-account/myAccount'));
 const Recipients = lazy(() =>
@@ -23,6 +24,18 @@ function App() {
   }
   return (
     <main className='bg-[#fff] '>
+      <ToastContainer
+        position='top-right'
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover
+        theme='light'
+      />
       <Routes>
         {/* <Route element={<Home />}> */}
         <Route path='/' element={<Entrypoint />}>
