@@ -69,6 +69,9 @@ const SignUp = ({ setToggleModal }) => {
           password: '',
         });
         setPhonenumber('');
+        setTimeout(() => {
+          setToggleModal('sign-in');
+        }, 1500);
       } else {
         setLoading(false);
       }

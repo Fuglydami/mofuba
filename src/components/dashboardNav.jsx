@@ -76,7 +76,7 @@ const DashboardNav = () => {
                 <a>Item 1</a>
               </li>
               <div
-                onClick={() => navigate('/')}
+                onClick={() => navigate('/home')}
                 className='flex cursor-pointer items-center gap-3'
               >
                 <BiLogOut />
