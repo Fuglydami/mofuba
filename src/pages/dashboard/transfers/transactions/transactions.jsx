@@ -16,7 +16,7 @@ import Kenya from '../../../../assets/images/kenya.png';
 import USD from '../../../../assets/images/USD.png';
 import Facebook from '../../../../assets/images/facebook.png';
 import Upwork from '../../../../assets/images/upwork.png';
-import useScrollToTop from '../../../../hooks/useScrollToTop';
+import { useScrollToTop } from '../../../../hooks/useScrollToTop';
 const Transactions = () => {
   useScrollToTop();
   const [search, setSearch] = useState('');

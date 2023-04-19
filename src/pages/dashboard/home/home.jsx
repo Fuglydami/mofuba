@@ -12,7 +12,7 @@ import Chart from './chart';
 import QuickExchange from './quickExchange';
 import Table from './table';
 import Wallet from './wallet';
-import useScrollToTop from '../../../hooks/useScrollToTop';
+import { useScrollToTop } from '../../../hooks/useScrollToTop';
 const Home = () => {
   useScrollToTop();
   return (

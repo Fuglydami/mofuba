@@ -6,7 +6,7 @@ import { BsThreeDots } from 'react-icons/bs';
 import { CustomInput } from '../../../shared-lib/input';
 import { useState } from 'react';
 import { MdOutlineSwapHoriz } from 'react-icons/md';
-import useScrollToTop from '../../../hooks/useScrollToTop';
+import { useScrollToTop } from '../../../hooks/useScrollToTop';
 
 const Invoices = () => {
   useScrollToTop();

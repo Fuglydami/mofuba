@@ -70,16 +70,16 @@ const DashboardNav = () => {
             </div>
             <div
               tabIndex={0}
-              className='dropdown-content menu mt-3 p-2 shadow bg-base-100 rounded-box w-52'
+              className='dropdown-content menu mt-3 p-3 shadow bg-base-100 rounded-box w-52'
             >
               <li>
                 <a>Item 1</a>
               </li>
               <div
                 onClick={() => navigate('/home')}
-                className='flex cursor-pointer items-center gap-3'
+                className='flex cursor-pointer items-center gap-2'
               >
-                <BiLogOut />
+                <BiLogOut className='text-[#FF4747]' />
                 <span>Logout</span>
               </div>
             </div>

@@ -7,6 +7,7 @@ import { CustomInput, CustomPasswordInput } from '../../shared-lib/input';
 import { posthttp } from '../../services/actions';
 import { AUTH } from '../../services/api-url';
 import { toast } from 'react-toastify';
+import { toastData } from '../../utils';
 
 const initState = {
   username: '',

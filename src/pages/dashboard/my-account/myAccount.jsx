@@ -6,7 +6,7 @@ import { MdSecurity } from 'react-icons/md';
 import { useRef } from 'react';
 import { useState } from 'react';
 import PersonalInformation from './personalInformation';
-import useScrollToTop from '../../../hooks/useScrollToTop';
+import { useScrollToTop } from '../../../hooks/useScrollToTop';
 
 const MyAccount = () => {
   useScrollToTop();

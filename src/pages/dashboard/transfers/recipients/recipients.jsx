@@ -13,7 +13,7 @@ import Avatar3 from '../../../../assets/images/recipientAvatar3.png';
 import UK from '../../../../assets/images/united kingdom.png';
 import EUR from '../../../../assets/images/european union.png';
 import USD from '../../../../assets/images/USD.png';
-import useScrollToTop from '../../../../hooks/useScrollToTop';
+import { useScrollToTop } from '../../../../hooks/useScrollToTop';
 const Recipients = () => {
   useScrollToTop();
   const [search, setSearch] = useState('');

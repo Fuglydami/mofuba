@@ -13,8 +13,10 @@ import SignUp from '../onboarding/sign-up';
 import VerifyAuthenticator from '../onboarding/verify-authenticator';
 import VerifyPhone from '../onboarding/verify-phone';
 import SignIn from '../signIn/sign-in';
+import { useScrollToTop } from '../../hooks/useScrollToTop';
 
 const LandingPage = () => {
+  useScrollToTop();
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenLogin, setIsOpenLogin] = useState(false);
   const [toggleModal, setToggleModal] = useState('accounts');
