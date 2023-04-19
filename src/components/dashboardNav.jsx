@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Avatar from '../assets/images/avatar.svg';
 import NotificationIcon from '../assets/images/notification.svg';
 import { BiLogOut } from 'react-icons/bi';
 
 const DashboardNav = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navTitle = () => {
     const route = location.pathname.substring(1);
@@ -74,7 +75,10 @@ const DashboardNav = () => {
               <li>
                 <a>Item 1</a>
               </li>
-              <div className='flex cursor-pointer items-center gap-3'>
+              <div
+                onClick={() => navigate('/')}
+                className='flex cursor-pointer items-center gap-3'
+              >
                 <BiLogOut />
                 <span>Logout</span>
               </div>
