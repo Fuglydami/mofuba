@@ -96,6 +96,7 @@ const SignIn = ({ setToggleModal }) => {
               <p className='text-[#008DD0] font-[600]'>Forgot Password</p>
             </div>
             <CustomButton
+              type='submit'
               title='Sign In'
               loading={loading}
               // onClick={() => navigate('/dashboard')}
@@ -103,16 +104,16 @@ const SignIn = ({ setToggleModal }) => {
               containerStyle=''
               buttonStyle='w-full  mb-5 '
             />
-            <p className='text-center  cursor-pointer'>
-              Don’t have an account?{' '}
-              <span
-                className='font-[800]'
-                onClick={() => setToggleModal('sign-up')}
-              >
-                Sign Up
-              </span>
-            </p>
           </form>
+          <p className='text-center  cursor-pointer'>
+            Don’t have an account?{' '}
+            <span
+              className='font-[800]'
+              onClick={() => setToggleModal('sign-up')}
+            >
+              Sign Up
+            </span>
+          </p>
         </div>
       </>
     </div>

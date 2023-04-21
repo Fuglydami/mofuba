@@ -188,6 +188,7 @@ const SignUp = ({ setToggleModal }) => {
             </div>
             <CustomButton
               title='Next'
+              type='submit'
               loading={loading}
               onClick={(e) => handleRegister(e)}
               // onClick={() => setToggleModal('create-password')}
