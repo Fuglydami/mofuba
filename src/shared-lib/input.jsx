@@ -27,6 +27,7 @@ export const CustomInput = ({
       <input
         type={type}
         value={value}
+        autoComplete='off'
         onChange={onChange}
         id={label}
         placeholder={placeholder}
@@ -65,7 +66,7 @@ export const CustomPasswordInput = ({
         type={type ? 'password' : 'text'}
         value={value}
         onChange={onChange}
-        autoComplete='off'
+        autoComplete='new-password'
         id={label}
         placeholder={placeholder}
         className={inputStyle}

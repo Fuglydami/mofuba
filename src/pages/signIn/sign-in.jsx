@@ -67,7 +67,7 @@ const SignIn = ({ setToggleModal }) => {
             <p className='mx-4 text-[#718096] font-[400]'>Or with email</p>
             <div className='md:w-[163px]  w-[100px]  h-[1px] relative top-3 bg-[#E2E8F0]' />
           </div>
-          <form action='#'>
+          <form autoComplete='off' action='#'>
             <div className='space-y-4'>
               <CustomInput
                 value={data.username}
