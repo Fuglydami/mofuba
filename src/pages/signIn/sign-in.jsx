@@ -53,19 +53,17 @@ const SignIn = ({ setToggleModal }) => {
           </p>
 
           <div className='cursor-pointer flex justify-center gap-4'>
-            <div className='flex items-center gap-3 border rounded-xl border-[#E2E8F0] px-6 py-3'>
+            <div className='flex items-center gap-3 border rounded-xl border-[#E2E8F0] w-full justify-center py-3'>
               <FcGoogle />
               <p className='md:text-[16px] text-[12px]'>Sign in with Google</p>
             </div>
-            <div className='flex items-center gap-3 border rounded-xl border-[#E2E8F0] px-6 py-3'>
+            <div className='flex items-center gap-3 border rounded-xl border-[#E2E8F0] w-full justify-center py-3'>
               <BsApple />
               <p className='md:text-[16px] text-[12px]'>Sign In with Apple</p>
             </div>
           </div>
-          <div className='my-4 flex justify-center'>
-            <div className='md:w-[163px]  w-[100px]  h-[1px] relative top-3  bg-[#E2E8F0]' />
-            <p className='mx-4 text-[#718096] font-[400]'>Or with email</p>
-            <div className='md:w-[163px]  w-[100px]  h-[1px] relative top-3 bg-[#E2E8F0]' />
+          <div className='divider  text-[#718096] font-[400] '>
+            Or with username
           </div>
           <form autoComplete='off' action='#'>
             <div className='space-y-4'>

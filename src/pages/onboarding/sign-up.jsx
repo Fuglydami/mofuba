@@ -92,20 +92,20 @@ const SignUp = ({ setToggleModal }) => {
           </p>
 
           <div className='cursor-pointer flex justify-center gap-4'>
-            <div className='flex items-center gap-3 border rounded-xl border-[#E2E8F0] px-6 py-3'>
+            <div className='flex items-center gap-3 border rounded-xl border-[#E2E8F0] justify-center w-full py-3'>
               <FcGoogle />
               <p className='md:text-[16px] text-[12px]'>Sign in with Google</p>
             </div>
-            <div className='flex items-center gap-3 border rounded-xl border-[#E2E8F0] px-6 py-3'>
+            <div className='flex items-center gap-3 border rounded-xl border-[#E2E8F0] w-full justify-center  py-3'>
               <BsApple />
               <p className='md:text-[16px] text-[12px]'>Sign In with Apple</p>
             </div>
           </div>
-          <div className='my-4 flex justify-center'>
-            <div className='md:w-[163px] w-[100px] h-[1px] relative top-3  bg-[#E2E8F0]' />
-            <p className='mx-4 text-[#718096] font-[400]'>Or with email</p>
-            <div className='md:w-[163px]  w-[100px] h-[1px] relative top-3 bg-[#E2E8F0]' />
+
+          <div className='divider  text-[#718096] font-[400] '>
+            Or with email
           </div>
+
           <form autoComplete='off' action='#'>
             <div className='space-y-4'>
               <div className='flex justify-center gap-4'>
@@ -159,13 +159,11 @@ const SignUp = ({ setToggleModal }) => {
             </div>
             <PhoneInput
               placeholder='Enter phone number'
-              // value={data.phonenumber}
               value={phonenumber}
               defaultCountry={'NG'}
               country={'NG'}
               international
               className='bg-[#fff] mt-5 w-full p-3 rounded-xl border border-[#E2E8F0] text-lg outline-none'
-              // onChange={(e) => handleFields('phonenumber', e.target.value)}
               onChange={setPhonenumber}
             />
             <div className='flex items-center py-6 justify-between'>

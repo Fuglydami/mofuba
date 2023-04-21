@@ -15,15 +15,17 @@ export const CustomInput = ({
   const inputStyle = `font-mulish appearance-none border ${textColor} border-[#E2E8F0] rounded-xl px-4 py-3 md:py-3 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-primaryColor focus:invalid:ring-pink-500 focus:shadow-md bg-transparent focus:bg-transparent `;
   return (
     <div id='input' className={`flex flex-col  ${width} `}>
-      <label
-        htmlFor={label}
-        className={` mb-2 ${labelText}   ${
-          label &&
-          `after:content-[${hidden}] after:text-red-500 after:pl-1 after:font-bold`
-        }`}
-      >
-        {label}
-      </label>
+      {label && (
+        <label
+          htmlFor={label}
+          className={` mb-2 ${labelText}   ${
+            label &&
+            `after:content-[${hidden}] after:text-red-500 after:pl-1 after:font-bold`
+          }`}
+        >
+          {label}
+        </label>
+      )}
       <input
         type={type}
         value={value}
