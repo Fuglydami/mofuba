@@ -2,10 +2,11 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 
 import { lazy } from 'react';
-import Entrypoint from './components/entrypoint';
+
 import Home from './pages/dashboard/home/home';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Protected from './components/protected';
 const Invoices = lazy(() => import('./pages/dashboard/invoices/invoices'));
 const MyAccount = lazy(() => import('./pages/dashboard/my-account/myAccount'));
 const Recipients = lazy(() =>
@@ -38,7 +39,7 @@ function App() {
       />
       <Routes>
         {/* <Route element={<Home />}> */}
-        <Route path='/' element={<Entrypoint />}>
+        <Route path='/' element={<Protected />}>
           <Route exact path='dashboard' element={<Home />} />
           <Route exact path='invoices' element={<Invoices />} />
           <Route exact path='my-wallets' element={<MyWallet />} />

@@ -8,6 +8,8 @@ import { posthttp } from '../../services/actions';
 import { AUTH } from '../../services/api-url';
 import { toast } from 'react-toastify';
 import { toastData } from '../../utils';
+import { saveJsonItemToLocalStorage } from '../../helper-functions/save-data';
+import jwt_decode from 'jwt-decode';
 
 const initState = {
   username: '',
@@ -29,9 +31,13 @@ const SignIn = ({ setToggleModal }) => {
     if (data.username && data.password) {
       setLoading(true);
       const data = await posthttp(AUTH, payload);
+
+      const token = data.data.data.access_Token;
       if (data && data.status === 200) {
-        // saveJsonItemToLocalStorage('token-details', data.data.token);
-        // saveJsonItemToLocalStorage('user-details', data.data.data);
+        saveJsonItemToLocalStorage('access-token', token);
+        var decoded = jwt_decode(token);
+        const { Profile } = decoded;
+        saveJsonItemToLocalStorage('user-details', JSON.parse(Profile));
         setLoading(false);
         navigate('/dashboard');
       } else {

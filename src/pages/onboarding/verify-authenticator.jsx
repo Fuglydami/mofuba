@@ -8,8 +8,6 @@ const VerifyAuthenticator = () => {
 
   const handleChange = (value) => {
     setValue(value);
-
-    console.log(value, 'value');
   };
 
   return (

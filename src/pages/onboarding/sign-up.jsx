@@ -43,7 +43,6 @@ const SignUp = ({ setToggleModal }) => {
         profilePicture: '',
       },
     };
-    console.log(payload, 'payload');
 
     if (
       data.firstname &&

@@ -69,7 +69,7 @@ const Home = () => {
             <h1 className='font-[800] text-[18px]'>Wallet</h1>
             <BsThreeDots style={{ color: '#CBD5E0', fontSize: '27px' }} />
           </div>
-          <div className='carousel w-full'>
+          <div className='carousel gap-3 w-full'>
             <div id='item1' className='carousel-item w-full'>
               <Wallet />
             </div>

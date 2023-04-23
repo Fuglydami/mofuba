@@ -95,7 +95,6 @@ export const CustomSelect = ({
   options,
   arrayOfCurrency,
 }) => {
-  console.log(arrayOfCurrency, 'currencies');
   return (
     <div id='input' className={`flex flex-col ${width} lg:my-5 my-0 `}>
       <label
