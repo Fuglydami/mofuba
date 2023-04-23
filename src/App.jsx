@@ -40,21 +40,68 @@ function App() {
         pauseOnHover
         theme='light'
       />
-      <Suspense fallback={<LoadingScreen />}>
-        <Routes>
-          <Route path='/' element={<Protected />}>
-            <Route exact path='dashboard' element={<Home />} />
-            <Route exact path='invoices' element={<Invoices />} />
-            <Route exact path='my-wallets' element={<MyWallet />} />
-            <Route exact path='recipients' element={<Recipients />} />
-            <Route exact path='transactions' element={<Transactions />} />
-            <Route exact path='my-account' element={<MyAccount />} />
-          </Route>
 
-          <Route exact path='/home' element={<LandingPage />} />
-          <Route path='*' element={<ErrorScreen />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path='/' element={<Protected />}>
+          <Route
+            exact
+            path='dashboard'
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            exact
+            path='invoices'
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Invoices />
+              </Suspense>
+            }
+          />
+          <Route
+            exact
+            path='my-wallets'
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <MyWallet />
+              </Suspense>
+            }
+          />
+          <Route
+            exact
+            path='recipients'
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Recipients />
+              </Suspense>
+            }
+          />
+          <Route
+            exact
+            path='transactions'
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <Transactions />
+              </Suspense>
+            }
+          />
+          <Route
+            exact
+            path='my-account'
+            element={
+              <Suspense fallback={<LoadingScreen />}>
+                <MyAccount />
+              </Suspense>
+            }
+          />
+        </Route>
+
+        <Route exact path='/home' element={<LandingPage />} />
+        <Route path='*' element={<ErrorScreen />} />
+      </Routes>
     </main>
   );
 }
