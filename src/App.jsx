@@ -7,6 +7,9 @@ import Home from './pages/dashboard/home/home';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Protected from './components/protected';
+import { Suspense } from 'react';
+import LoadingScreen from './pages/loadingScreen';
+import ErrorScreen from './pages/errorScreen';
 const Invoices = lazy(() => import('./pages/dashboard/invoices/invoices'));
 const MyAccount = lazy(() => import('./pages/dashboard/my-account/myAccount'));
 const Recipients = lazy(() =>
@@ -37,21 +40,21 @@ function App() {
         pauseOnHover
         theme='light'
       />
-      <Routes>
-        {/* <Route element={<Home />}> */}
-        <Route path='/' element={<Protected />}>
-          <Route exact path='dashboard' element={<Home />} />
-          <Route exact path='invoices' element={<Invoices />} />
-          <Route exact path='my-wallets' element={<MyWallet />} />
-          <Route exact path='recipients' element={<Recipients />} />
-          <Route exact path='transactions' element={<Transactions />} />
-          <Route exact path='my-account' element={<MyAccount />} />
-        </Route>
+      <Suspense fallback={<LoadingScreen />}>
+        <Routes>
+          <Route path='/' element={<Protected />}>
+            <Route exact path='dashboard' element={<Home />} />
+            <Route exact path='invoices' element={<Invoices />} />
+            <Route exact path='my-wallets' element={<MyWallet />} />
+            <Route exact path='recipients' element={<Recipients />} />
+            <Route exact path='transactions' element={<Transactions />} />
+            <Route exact path='my-account' element={<MyAccount />} />
+          </Route>
 
-        <Route exact path='/home' element={<LandingPage />} />
-
-        {/* <Route path='*' element={<ErrorPage />} /> */}
-      </Routes>
+          <Route exact path='/home' element={<LandingPage />} />
+          <Route path='*' element={<ErrorScreen />} />
+        </Routes>
+      </Suspense>
     </main>
   );
 }
