@@ -42,18 +42,18 @@ const DashboardNav = () => {
     borderRadius: '3px',
     background: '#FF4747',
     position: 'relative',
-    left: '20px',
+    left: '55px',
     bottom: '4px',
   };
   const [dropdown, setDropDown] = useState(false);
   return (
-    <nav className='fixed bg-[#fff] dashboardNavwidth z-10 top-0 p-8   text-[#1A202C]'>
+    <nav className='fixed bg-[#fff] dashboardNavwidth z-10 top-0 p-8    text-[#1A202C]'>
       <div className='flex items-center justify-between'>
         <h1 className='text-[24px] font-[800]'>{navTitle()}</h1>
 
         <div className='flex items-center gap-6'>
+          <div className='animate-bounce ease-in-out' style={notifStyle} />
           <div className=' h-[48px] flex justify-center items-center bg-[#FAFAFA] w-[48px] rounded-full'>
-            <div className='animate-bounce ease-in-out' style={notifStyle} />
             <img
               className='h-[27px]  w-[22px] cursor-pointer'
               src={NotificationIcon}
@@ -68,7 +68,7 @@ const DashboardNav = () => {
             } px-2 py-1.5 rounded-[12px] flex items-center gap-4 cursor-pointer `}
           >
             <img
-              className='h-[40px] w-[40px] flex'
+              className='h-[32px] w-[32px] flex'
               src={Avatar}
               loading='lazy'
               alt='message'

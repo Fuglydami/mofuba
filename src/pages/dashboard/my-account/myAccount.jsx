@@ -34,10 +34,10 @@ const MyAccount = () => {
     },
   ];
   return (
-    <div className=''>
-      <div className='h-[1px] w-full  bg-[#E2E8F0]' />
+    <div className=' '>
+      <div className='h-[1px] w-full bg-[#E2E8F0]' />
       <main className='flex '>
-        <section className='w-[30%] mt-10'>
+        <section className='  w-[30%] mt-10'>
           <div className='w-[80%] mb-10 mx-auto rounded-[16px] bg-primaryColor p-8'>
             <div className=' flex items-center gap-4  mb-8'>
               <div className='w-[30%]'>
