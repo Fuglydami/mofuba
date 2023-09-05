@@ -24,28 +24,29 @@ const SignIn = ({ setToggleModal }) => {
   };
   const handleLogin = async (e) => {
     e.preventDefault();
-    const payload = {
-      username: data.username,
-      password: data.password,
-    };
-    if (data.username && data.password) {
-      setLoading(true);
-      const data = await posthttp(AUTH, payload);
+    navigate('/dashboard');
+    // const payload = {
+    //   username: data.username,
+    //   password: data.password,
+    // };
+    // if (data.username && data.password) {
+    //   setLoading(true);
+    //   const data = await posthttp(AUTH, payload);
 
-      const token = data.data.data.access_Token;
-      if (data && data.status === 200) {
-        saveJsonItemToLocalStorage('access-token', token);
-        var decoded = jwt_decode(token);
-        const { Profile } = decoded;
-        saveJsonItemToLocalStorage('user-details', JSON.parse(Profile));
-        setLoading(false);
-        navigate('/dashboard');
-      } else {
-        setLoading(false);
-      }
-    } else {
-      toast.warning('Enter Username and Password', toastData);
-    }
+    //   const token = data.data.data.access_Token;
+    //   if (data && data.status === 200) {
+    //     saveJsonItemToLocalStorage('access-token', token);
+    //     var decoded = jwt_decode(token);
+    //     const { Profile } = decoded;
+    //     saveJsonItemToLocalStorage('user-details', JSON.parse(Profile));
+    //     setLoading(false);
+    //     navigate('/dashboard');
+    //   } else {
+    //     setLoading(false);
+    //   }
+    // } else {
+    //   toast.warning('Enter Username and Password', toastData);
+    // }
   };
   return (
     <div className='w-full '>

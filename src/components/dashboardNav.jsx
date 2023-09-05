@@ -14,7 +14,7 @@ const DashboardNav = () => {
   const navigate = useNavigate();
   const user = getFromLocalStorage('user-details');
 
-  const { FullName, Address } = JSON.parse(user);
+  // const { FullName, Address } = JSON.parse(user);
 
   const navTitle = () => {
     const route = location.pathname.substring(1);
@@ -78,7 +78,10 @@ const DashboardNav = () => {
                 onClick={() => setDropDown(!dropdown)}
                 className='flex items-center gap-3'
               >
-                <p className='font-[800] uppercase'>{FullName}</p>
+                <p className='font-[800] uppercase'>
+                  {/* {FullName} */}
+                  John Doe
+                </p>
                 <span className={`text-sm ${dropdown && 'rotate-180'}  `}>
                   <RiArrowDropDownLine style={{ fontSize: '24px' }} />
                 </span>
